@@ -10,7 +10,8 @@
 ⚠️ *If you having any problem, let us know in the ["Issues"](https://github.com/P0L3NARUBA/gtav-sourcecode-build-guide/issues) section of this repository!*<br>
 💬 *You can check out ["Discussions"](https://github.com/P0L3NARUBA/gtav-sourcecode-build-guide/discussions) for talking and discuss.*
 
-📩 *You can contact me from discord: yungprivatjet*
+Most of this guide is from <a href="https://github.com/RockstarAdvancedGameEngine/gtav-sourcecode-build-guide">this repo</a> but I fixed some errors like missing variables and more simple directories.
+I decided to make this because I spent way too much time figuring out how to fix most the issues.
 
 # Contents
 1. [Prerequisites](#prerequisites)
@@ -69,7 +70,7 @@
     - Presented by [@userTermzik](https://github.com/userTermzik), but i don't recommend this because it needs some modifications. 
 
 ## Prebuilt Files
- - [Shaders](https://github.com/WH0LEWHALE/gtav-sourcecode-build-guide/files/14649717/common.zip) ([You can build your own shaders and play with them without any problem.](#building-shaders))
+ - [Shaders](https://github.com/WH0LEWHALE/gtav-sourcecode-build-guide/files/14649717/common.zip) ([You can build your own shaders and play with them without any problem.](#building-shaders)) ## Link Dead
  - Game Scripts (Already included, [You can build your own scripts and play with them without any problem.](#building-game-scripts))
  - [BankRelease EXE](https://drive.google.com/file/d/17Zkmoc_9RIJZNwKQyC5YWLJgf64TLuHQ/view?usp=sharing) (If you want to skip the "Building The Game Binary/Executable" step)
 
@@ -84,7 +85,7 @@ ___
 ## Prerequisites Setup
 1. Install DirectX SDK June 2010
    - **If you get error S1023, Uninstall `Visual C++ 2010 Redistributable` & Reinstall DirectX SDK - (June 2010).**
-2. Install 7-Zip
+2. Install 7-Zip/Win-rar
 3. Install Visual Studio 2012
    - Uncheck all optional components in the installer **except "Microsoft Foundation Classes for C++"** to save space, none of them are needed for the build.
 4. Install Update 4 for Visual Studio 2012
@@ -95,7 +96,7 @@ ___
       3. Paste the path and press Enter
    - Select to install "Incredibuild Agent", "Incredibuild Coordinator", and the extension for Visual Studio
 6. Install OpenIV
-7. Install [DLL Patches and Rush Patches](#miscellaneous)
+7. Extract [DLL Patches and Rush Patches](#miscellaneous)
 8. (OPTIONAL) Install 3D Studio Max 2010 SDK
 9. Create X:\ Drive by following the steps at the bottom:
     1. Open Command Prompt
@@ -110,6 +111,7 @@ setx /m RS_TOOLSROOT X:\gta5\tools_ng
 setx /m DXSDK_DIR "C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)"
 setx /m RS_CODEBRANCH X:\gta5\src\dev_ng
 setx /m RS_PROJECT gta5
+setx /m RAGE_DIR X:\gta5\src\dev_ng\rage
 ```
 13. (OPTIONAL) Symlink the `X:\gta5\titleupdate\dev_ng` directory.
     - This can be done with this CMD Command: `mklink /D /J "X:\gta5\titleupdate\dev_ng" "INSERT_RETAIL_COPY_HERE"`.
@@ -137,6 +139,7 @@ setx /m RS_PROJECT gta5
 ```
 
 ## Building The Game Binary/Executable
+#### Your Game Directory is the title_update folder
 1. Run `X:\gta5\src\dev_ng\game\VS_Project\load_sln_unity_2012.bat`
 	- If prompted with "How do you want to open this file?", check "Always use this app to open .sln files" and Select **Visual Studio 2012** then click OK
 2. Once the solution loads, open the dropdown menu that says "Debug" at the top, select "Configuration Manager"
@@ -156,14 +159,26 @@ setx /m RS_PROJECT gta5
 > These steps are here to allow modding or for those who prefer to build from source as much as possible<br>
 > If you prefer using prebuilt files, [here is all the instruction to make them work.](#prebuilt-stuff)
 
+## Setting Another System Variable
+Right-click This PC > Properties > Advanced system settings > Environment Variables.
+Under User variables, click New.
+Variable Name: RAGE_DIR
+Set Path to X:\gta5\src\dev_ng\rage
+Repeat for System Variable
+
 ## Building Shaders
-1. Under "Shaders", right click the "shaders_rc" project and click "Build"
-2. (OPTIONAL) Build low quality shaders
+1. hold control and click shaders_rc and shaders_dependency then right click and properties
+2. Go to VC++, then click Include directories'dropdown menu and click <edit>
+3. In the top box (User-Specified Values), add $(Inherit);$(RAGE_DIR)\base\src
+4. Now click ok, apply, ok and close out the properties
+5. Under "Shaders", right click the "shaders_rc" project and click "Build"
+6. (OPTIONAL) Build low quality shaders
    1. Right click the "shaders_rc" project and click "Properties"
    2. Select `Configuration Properties > NMake`
    3. Under "General", change all command lines from ending with `win32_40.bat` to ending with `win32_40_lq.bat`, then click "Apply" and "OK"
    4. Rebuild shaders and wait it to finish
-3. Copy `X:\gta5\titleupdate\dev_ng\common` to game directory.
+This will take a while
+7. title_update is your game directory automatically so visual studio will build there, if the "common" folder isn't in the directory repeat step 5 (and 6 if you build lq shaders).
 
 ## Building Game Scripts
 1. Open Command Prompt and Run the following commands:
@@ -234,9 +249,4 @@ rag
 
 [Almost Every Controls & Keys](/other/controls)
 
-# Final Thoughts
 
-Thanks for reading my precious tutorial, please consider starring or forking the repository if this helped u<br>
-**Feel free to contribute the repository, you'll be welcomed if you dont make stupid thingies.**
-
-<!-- Made with ❤️ by Smashtika(@yungDoom) -->
