@@ -36,7 +36,7 @@ I decided to make this because I spent way too much time figuring out how to fix
 
 ## Prerequisites
 ### Base
- - Windows 10/11
+ - Windows 10/11 ## VM HIGHLY RECOMMENDED
     - [LTSC 2021](https://archive.org/download/Windows10EnterpriseLTSC202164Bit/en-us_windows_10_enterprise_ltsc_2021_x64_dvd_d289cf96.iso) Recommended, but you can use Normal Windows 10/11 too.
  - Latest Grand Theft Auto V Files from Steam, Epic Games or maybe Rockstar Games Launcher. 
  - Minimum 65GB Free Space, 140GB+ is Recommended because of the game files and programs.
