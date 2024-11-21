@@ -23,7 +23,7 @@ I decided to make this because I spent way too much time figuring out how to fix
    2. [Building Shaders](#building-shaders)
    3. [Building Game Scripts](#building-game-scripts)
 5. [Patching Game Assets](#patching-game-assets)
-   1. Main Game Assets(#main-game-assets)
+   1. [Main Game Assets](#main-game-assets)
    2. [Modifying the RPF Files](#modifying-the-rpf-files)
 10. [Running The Game](#running-the-game)
 11. [BankRelease & Debug Controls](#bankrelease--debug-controls)
