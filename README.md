@@ -74,9 +74,9 @@ I decided to make this because I spent way too much time figuring out how to fix
     - ## You can probably find a download for it on the internet archive or search up gIKgDXuVHNzIgXkiwpB.zip on 'onionized' duck duck go
  - (OPTIONAL) [Network Fix](https://github.com/Vasik96/gtav-sourcecode-build-guide/raw/main/Network.Fix.zip)
     - This will fix the Studio or IP-related issues.
-    - Thanks @Vasik96 for new download
+    - Thanks [@Vasik96](https://github.com/Vasik96) for new download
  - [Mixed Patches](https://github.com/Vasik96/gtav-sourcecode-build-guide/raw/main/Mixed_Patches.zip)
-   - Thanks @Vasik96 for new download
+   - Thanks [@Vasik96](https://github.com/Vasik96) for new download
  - (OPTIONAL & NOT STABLE) [Visual Studio 2022 Patches](https://small.fileditchstuff.me/s10/VBlSfKBylNQplMIPLL.zip)
     - Presented by [@userTermzik](https://github.com/userTermzik), but I don't recommend this because it needs some modifications. 
 
