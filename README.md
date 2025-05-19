@@ -62,7 +62,8 @@ I decided to make this because I spent way too much time figuring out how to fix
  - [OpenIV](https://openiv.com/WebIV/guest.php?get=1)
     - For editing the game files.
  - [Git](https://git-scm.com/)
-    - For Applying some patches.   
+    - For Applying some patches.
+ - [Perf Force P4](https://www.perforce.com/products/helix-core/free-version-control)
 
 ### Miscellaneous
  - [Rush Patches](https://github.com/WH0LEWHALE/gtav-sourcecode-build-guide/files/14641602/rush_patches-master.zip)
@@ -70,9 +71,12 @@ I decided to make this because I spent way too much time figuring out how to fix
  - (OPTIONAL) [3rdParty Folder](https://mega.nz/file/SqojFJZL#eYINo1pnspuTvdbocz4cA7NYZA8BN2H2nm7YEXuzlFw)
  - (OPTIONAL) [gIKgDXuVHNzIgXkiwpB.zip - Art Asset Leak](https://big.fileditchnew.ch/b9/gIKgDXuVHNzIgXkiwpB.zip) ## Link Dead
     - [Mirror Link](https://www.bojarcz.uk/gIKgDXuVHNzIgXkiwpB.zip), Thanks to [@RockstarAdvancedGameEngine](https://github.com/RockstarAdvancedGameEngine). ## Link Dead
- - (OPTIONAL) [Network Fix](https://github.com/P0L3NARUBA/gtav-sourcecode-build-guide/files/15209424/Network.Fix.zip)
+    - ## You can probably find a download for it on the internet archive or search up gIKgDXuVHNzIgXkiwpB.zip on 'onionized' duck duck go
+ - (OPTIONAL) [Network Fix](https://github.com/Vasik96/gtav-sourcecode-build-guide/raw/main/Network.Fix.zip)
     - This will fix the Studio or IP-related issues.
- - [Mixed Patches](https://github.com/P0L3NARUBA/gtav-sourcecode-build-guide/files/15320504/Mixed_Patches.zip)
+    - Thanks @Vasik96 for new download
+ - [Mixed Patches](https://github.com/Vasik96/gtav-sourcecode-build-guide/raw/main/Mixed_Patches.zip)
+   - Thanks @Vasik96 for new download
  - (OPTIONAL & NOT STABLE) [Visual Studio 2022 Patches](https://small.fileditchstuff.me/s10/VBlSfKBylNQplMIPLL.zip)
     - Presented by [@userTermzik](https://github.com/userTermzik), but I don't recommend this because it needs some modifications. 
 
